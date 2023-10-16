@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if($_SESSION['status']!="login"){
-    header("location:login/index.php?message=new_session");
-}
+	session_start();
+	if($_SESSION['status']!="login"){
+		header("location:login/index.php?pesan=not_logged");
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,7 +30,7 @@
         <a class="nav-link" href="data_jabatan.php">Data Jabatan</a>
       </li>
     </ul>
-        <a class="nav-link" href="login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>
+        <a class="nav-link" href="./login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>
   </div>
 </nav>
 <br><br>
