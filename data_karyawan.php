@@ -75,10 +75,10 @@
     </tbody>
 </table>
 <br><br>
-<a href="cetak.php" target="_blank" class="btn btn-info mx-5">Print</a>
+<a href="./process/cetak.php" target="_blank" class="btn btn-info">Print</a>
 <style>
   body{
-    overflow:hidden;
+    
   }
   .action{
     margin-right: 100px;
@@ -87,17 +87,14 @@
     width:94% !important;
     margin-inline: auto;
   }
+  .btn-info{
+    margin-left: 2em;
+  }
   th{
-    border-right: 2px solid #dee2e6;
-    border-left: 2px solid #dee2e6;
-    border-bottom: 2px solid #dee2e6;
-
-
+    border: 2px solid #dee2e6 !important;
   }
   td{
-    border-bottom: 2px solid #dee2e6;
-     border-right: 2px solid #dee2e6;
-    border-left: 2px solid #dee2e6;
+    border: 2px solid #dee2e6; 
   }
 </style>
 </body>

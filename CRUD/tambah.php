@@ -24,13 +24,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">Home </a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="data_karyawan.php">Data Karyawan</a>
+            <a class="nav-link" href="../data_karyawan.php"><span class="sr-only">(current)</span>Data Karyawan</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="data_jabatan.php">Data Jabatan</a>
+            <a class="nav-link" href="../data_jabatan.php">Data Jabatan</a>
         </li>
         </ul>
             <a class="nav-link" href="login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>;
@@ -96,8 +96,8 @@
 </body>
  
  
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="../css/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
 <script>
     
     (function() {
@@ -116,4 +116,6 @@
         },false);
     })();
 </script>
+<script src="../css/js/bootstrap.bundle.min.js"></script>
+
 </html>

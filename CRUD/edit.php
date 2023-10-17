@@ -27,7 +27,7 @@
         <a class="nav-link active" href="data_karyawan.php">Data Karyawan<span class="sr-only">(current)</span></a>
       </li>
  	  <li class="nav-item">
-        <a class="nav-link" href="data_jabatan.php">Data Jabatan</a>
+        <a class="nav-link" href="../data_jabatan.php">Data Jabatan</a>
       </li>
     </ul>
         <a class="nav-link" href="login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>
@@ -37,7 +37,7 @@
 <h2 class="mx-5 mt-5">Add Employee Data</h2>
 <a href="data_karyawan.php" class="btn btn-primary mx-5 mb-4">See Data</a>
 <br><br>
-<form method="post" action="simpan.php" class="needs-validate mx-5">
+<form method="post" action="save.php" class="needs-validate mx-5">
 <?php 
     include("../connection.php");
     $id = $_GET["id"];
