@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/css/bootstrap.min.css">
     <title>Adds Employee Data</title>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,17 +33,17 @@
             <a class="nav-link" href="data_jabatan.php">Data Jabatan</a>
         </li>
         </ul>
-            <a class="nav-link" href="login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>
+            <a class="nav-link" href="login/logout.php" class="form-inline my-2 my-lg-0">Logout</a>;
     </div>
     </nav>
     <br>
     <h2 class="mx-5">Add Employee Data</h2>
-    <a href="data_karyawan.php" class="btn btn-primary mx-5 mt-3 mb-5">See Data</a>
+    <a href="../data_karyawan.php" class="btn btn-primary mx-5 mt-3 mb-5">See Data</a>
     <br><br>
-    <form action="prosesskaryawan.php" method="post" class="needs-validation d-flex flex-column mx-5" novalidate>
+    <form action="../process/prosesskaryawan.php" method="POST" class="needs-validation d-flex flex-column mx-5" novalidate>
         <div class="form-group">
             <label for="validationCustom01">Employee Name</label>
-            <input type="text" class="form-control">
+            <input type="text" name="nama" class="form-control">
             <div class="invalid-feedback">
                 Insert Name
             </div>
@@ -56,7 +57,7 @@
         </div>   
         <div class="form-group">
                 <label for="validationCustom01">Gender</label>
-                <select name="jenis_kelamin" id="validationCustom01" class="custom-select" name="jenis_kelamin" required="">
+                <select name="jenis_kelamin" id="validationCustom01" class="custom-select"required="">
                     <option selected disabled value="">Pick a Gender...</option>
                     <option value="laki-laki">Male</option>
                     <option value="perempuan">Female</option>
@@ -70,7 +71,7 @@
             <select name="jabatan" id="validationCustom01" class="custom-select">
                 <option selected disabled value="">Pick a Department</option>
                 <?php 
-                    include("./connection.php");
+                    include("../connection.php");
                     $sql = mysqli_query($connect,"SELECT * FROM jabatan");
                     while($dataFetch = mysqli_fetch_array($sql)){
                 ?>
@@ -90,10 +91,15 @@
                 Insert Address
             </div>
         </div>
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary mb-5">Submit</button>
     </form>
 </body>
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="../css/js/bootstrap.bundle.min.js"></script>
 <script>
+    
     (function() {
         'use strict';
         window.addEventListener('load',function() {
@@ -110,5 +116,4 @@
         },false);
     })();
 </script>
-<script src="../css/js/bootstrap.bundle.min.js"></script>
 </html>
