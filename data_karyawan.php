@@ -75,7 +75,7 @@
     </tbody>
 </table>
 <br><br>
-<a href="./process/cetak.php" target="_blank" class="btn btn-info">Print</a>
+<a href="cetak.php" target="_blank" class="btn btn-info">Print</a>
 <style>
   body{
     

@@ -57,7 +57,7 @@
       <label>Gender</label>
       <?php $genderCol = $dataFetch['jenis_kelamin'] ?>
       <select name="" id="" class="custom-select">
-        <option value="laki-laki" <?php $genderCol == 'laki-laki' ? 'selected="slected"': ''; ?>>Male</option>
+        <option value="laki-laki" <?php $genderCol == 'laki-laki' ? 'selected="selected"': ''; ?>>Male</option>
         <option value="perempuan" <?php $genderCol == 'perempuan' ? 'selected="selected"' : ''; ?>>Female</option>
       </select>
     </div>
