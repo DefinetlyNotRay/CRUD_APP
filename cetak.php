@@ -9,7 +9,8 @@
 <head>
 	<title>Aplikasi Data karyawan</title>
 	<link rel="stylesheet" type="text/css" href="css/css/bootstrap.min.css">
-    <script src="./css/js/jsPdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 </head>
 <style type="text/css">
@@ -25,6 +26,8 @@
   }
 </style>
 <body>
+<div class="content" id="content">
+
 	<center>
 		<h2><b>DATA KARYAWAN</b></h2>
     <br>  
@@ -64,20 +67,39 @@
 <hr>
   <center><p>&copy; Hikam aramdan</p></center>
 </div>
-<button class="generatePdf">Generate PDF</button>
+</div>
+<center> 
+
+  <button class="btn btn-success" id="download">Generate PDF</button>
+</center>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.0/html2pdf.bundle.js"></script> -->
 
-<!-- <script>
-    import html2pdf from 'html2pdf.js';
-const generatePdfd = document.querySelector(".generatePdf");
-
-function generatePDF() {
-  const element = document.getElementById("content");
-  html2pdf(element);
-}
-
-generatePdfd.addEventListener("click", generatePDF);
-</script> -->
+<script>
+    window.onload = function(){
+      document.getElementById("download").addEventListener("click", () => {
+        const invoice = this.document.getElementById("content");
+        console.log(invoice);
+        console.log(window);
+        var opt = {
+          margin: 1,
+          filename:'Employee Data.pdf',
+          image:{
+            type: 'jpeg',
+            quality: 0.98
+          },
+          html2canvas:{
+            scale: 2
+          },
+          jsPDF: {
+            unit:'in',
+            format:'tabloid',
+            orientation: 'landscape'
+          }
+        };
+        html2pdf().from(invoice).set(opt).save();
+      })
+      }
+</script>
 
 </body>
 </html>
